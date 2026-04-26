@@ -15,36 +15,40 @@
 <body>
 
   <header class="header">
-    <a href="./" class="brand">
-      <img src="./assets/images/logos/logo.svg" alt="Tech book club">
-    </a>
+    <div class="container">
+      <a href="./" class="brand">
+        <img src="./assets/images/logos/logo.svg" alt="Tech book club">
+      </a>
+    </div>
   </header>
 
-  <main>
+  <main class="page stack">
     <section class="hero">
       <div class="hero__inner container">
-        <div class="hero__overview">
-          <div class="hero__content">
-            <div class="hero__text">
+        <div class="hero__overview stack">
+          <div class="hero__content stack">
+            <div class="hero__text stack">
               <h1 class="hero__title">Join the ultimate tech book club</h1>
               <p class="hero__description">Turn your reading time into learning time with fellow tech enthusiasts. Get
                 curated recommendations, join vibrant discussions, and level up your skills one chapter at a time.</p>
             </div>
             <div class="hero__cta stack">
-              <a href="#options" class="btn btn--primary">
+              <a href="#options" class="btn btn--primary cluster">
                 <span>Review membership options</span>
                 <img src="./assets/images/icons/icon-arrow-down.svg" alt="">
               </a>
-              <div class="summary-testimonial">
-                <img src="./assets/images/avatars/avatars.webp" alt="" class="summary-testimonial__avatars">
-                <div class="star-group" aria-label="Rated 5 out of 5 stars">
-                  <img src="./assets/images/icons/icon-star.svg" alt="">
-                  <img src="./assets/images/icons/icon-star.svg" alt="">
-                  <img src="./assets/images/icons/icon-star.svg" alt="">
-                  <img src="./assets/images/icons/icon-star.svg" alt="">
-                  <img src="./assets/images/icons/icon-star.svg" alt="">
+              <div class="testimonial-summary">
+                <img src="./assets/images/avatars/avatars.webp" alt="" class="testimonial-summary__avatars">
+                <div class="testimonial-summary__content stack">
+                  <div class="star-group cluster" aria-label="Rated 5 out of 5 stars">
+                    <img src="./assets/images/icons/icon-star.svg" alt="">
+                    <img src="./assets/images/icons/icon-star.svg" alt="">
+                    <img src="./assets/images/icons/icon-star.svg" alt="">
+                    <img src="./assets/images/icons/icon-star.svg" alt="">
+                    <img src="./assets/images/icons/icon-star.svg" alt="">
+                  </div>
+                  <p class="testimonial-summary__text">200+ developers joined already</p>
                 </div>
-                <p class="summary-testimonial__text">200+ developers joined already</p>
               </div>
             </div>
           </div>
@@ -59,19 +63,31 @@
     </section>
 
     <section class="feature">
-      <div class="feature__inner container">
-        <div class="feature__content">
+      <div class="feature__inner container stack">
+        <div class="feature__content stack">
           <h2 class="text-title">Read together, grow together</h2>
 
-          <ul class="feature__list">
-            <li class="feature__item">Monthly curated tech reads selected by industry experts</li>
-            <li class="feature__item">Virtual and in-person meetups for deep-dive discussions</li>
-            <li class="feature__item">Early access to new tech book releases</li>
-            <li class="feature__item">Author Q&A sessions with tech thought leaders</li>
+          <ul class="feature__list stack">
+            <li class="feature__item text-description cluster">
+              <img src="./assets/images/icons/icon-check.svg" alt="">
+              <span>Monthly curated tech reads selected by industry experts</span>
+            </li>
+            <li class="feature__item text-description cluster">
+              <img src="./assets/images/icons/icon-check.svg" alt="">
+              <span>Virtual and in-person meetups for deep-dive discussions</span>
+            </li>
+            <li class="feature__item text-description cluster">
+              <img src="./assets/images/icons/icon-check.svg" alt="">
+              <span>Early access to new tech book releases</span>
+            </li>
+            <li class="feature__item text-description cluster">
+              <img src="./assets/images/icons/icon-check.svg" alt="">
+              <span>Author Q&A sessions with tech thought leaders</span>
+            </li>
           </ul>
         </div>
 
-        <picture class="feature__image">
+        <picture class="feature__image border-image">
           <source media="(min-width: 1024px)" srcset="./assets/images/sections/read-together-desktop.webp">
           <source media="(min-width: 768px)" srcset="./assets/images/sections/read-together-tablet.webp">
           <img src="./assets/images/sections/read-together-mobile.webp"
@@ -81,57 +97,54 @@
     </section>
 
     <section class="community">
-      <div class="community__inner container">
-        <div class="community__content">
-          <h2 class="text-title">Not your average book club</h2>
-          <p class="section__description">
+      <div class="community__inner container stack">
+        <div class="community__content stack">
+          <h2 class="text-title">Not your average book <span class="text-highlight">club</span></h2>
+          <p class="text-description">
             Connect with a community that speaks your language - from <em class="text-accent">Python</em> to <em
               class="text-accent">TypeScript</em> and
             everything in between. Our discussions blend technical depth with practical applications.
           </p>
         </div>
-        <picture class="community__image">
+        <picture class="community__image border-image">
           <source media="(min-width: 1024px)" srcset="./assets/images/sections/not-average-desktop.webp">
           <source media="(min-width: 768px)" srcset="./assets/images/sections/not-average-tablet.webp">
           <img src="./assets/images/sections/not-average-mobile.webp"
             alt="Developers casually talking while holding a book">
         </picture>
-        <img src="./assets/images/logos/logos-tech.svg" alt="" class="logos-tech">
+
+        <img src="./assets/images/logos/logos-tech.svg" alt="" class="community__logos">
       </div>
     </section>
 
     <section class="journey">
-      <div class="journey__inner container">
+      <div class="journey__inner container stack">
         <h2 class="text-title">Your tech reading journey</h2>
-        <ul class="journey__list">
-          <li class="journey__item">
+        <ol class="journey__list stack">
+          <li class="journey__item stack">
             <span class="journey__item-number">1</span>
-            <img src="./assets/images/patterns/pattern-arrow.svg" alt="" class="journey__item-arrow">
             <span class="journey__item-text">Choose your membership tier</span>
           </li>
           <li class="journey__item stack">
             <span class="journey__item-number">2</span>
-            <img src="./assets/images/patterns/pattern-arrow.svg" alt="" class="journey__item-arrow">
             <span class="journey__item-text">Get your monthly book selection</span>
           </li>
           <li class="journey__item stack">
             <span class="journey__item-number">3</span>
-            <img src="./assets/images/patterns/pattern-arrow.svg" alt="" class="journey__item-arrow">
             <span class="journey__item-text">Join our discussion forums</span>
           </li>
           <li class="journey__item stack">
             <span class="journey__item-number">4</span>
-            <img src="./assets/images/patterns/pattern-arrow.svg" alt="" class="journey__item-arrow">
             <span class="journey__item-text">Attend exclusive meetups</span>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
     <section id="options" class="pricing">
-      <div class="pricing__inner container">
+      <div class="pricing__inner container stack">
         <h2 class="text-title">Membership options</h2>
-        <div class="pricing__grid">
+        <div class="pricing__options">
           <article class="pricing-card">
             <header class="pricing-card__header stack">
               <h3 class="pricing-card__title">Starter</h3>
@@ -209,8 +222,8 @@
         <span>Review membership options</span>
         <img src="./assets/images/icons/icon-arrow-up.svg" alt="">
       </a>
-      <div class="summary-testimonial">
-        <img src="./assets/images/avatars/avatars.webp" alt="" class="summary-testimonial__avatars">
+      <div class="testimonial-summary">
+        <img src="./assets/images/avatars/avatars.webp" alt="" class="testimonial-summary__avatars">
         <div class="star-group" aria-label="Rated 5 out of 5 stars">
           <img src="./assets/images/icons/icon-star.svg" alt="">
           <img src="./assets/images/icons/icon-star.svg" alt="">
@@ -218,7 +231,7 @@
           <img src="./assets/images/icons/icon-star.svg" alt="">
           <img src="./assets/images/icons/icon-star.svg" alt="">
         </div>
-        <p class="summary-testimonial__text">200+ developers joined already</p>
+        <p class="testimonial-summary__text">200+ developers joined already</p>
       </div>
 
       <hr class="footer__divider">

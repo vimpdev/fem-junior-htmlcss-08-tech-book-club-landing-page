@@ -41,6 +41,8 @@
     --ff-display: 'Martian Mono', system-ui, sans-serif;
     --ff-body: 'Inter', system-ui, sans-serif;
 
+    --fw-semibold: 600;
+
     --fs-100: 0.875rem;
     --fs-200: clamp(1rem, .75rem + 1vw, 1.125rem);
     --fs-300: 1.25rem;
