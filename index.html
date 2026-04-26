@@ -14,7 +14,7 @@
 
 <body>
 
-  <header class="header">
+  <header class="header bg-pattern-light">
     <div class="container">
       <a href="./" class="brand">
         <img src="./assets/images/logos/logo.svg" alt="Tech book club">
@@ -23,7 +23,7 @@
   </header>
 
   <main class="page stack">
-    <section class="hero">
+    <section class="hero bg-pattern-light">
       <div class="hero__inner container">
         <div class="hero__overview stack">
           <div class="hero__content stack">
@@ -33,14 +33,14 @@
                 curated recommendations, join vibrant discussions, and level up your skills one chapter at a time.</p>
             </div>
             <div class="hero__cta stack">
-              <a href="#options" class="btn btn--primary cluster">
+              <a href="#options" class="btn cluster">
                 <span>Review membership options</span>
                 <img src="./assets/images/icons/icon-arrow-down.svg" alt="">
               </a>
               <div class="testimonial-summary">
                 <img src="./assets/images/avatars/avatars.webp" alt="" class="testimonial-summary__avatars">
                 <div class="testimonial-summary__content stack">
-                  <div class="star-group cluster" aria-label="Rated 5 out of 5 stars">
+                  <div class="star-group cluster" role="img" aria-label="Rated 5 out of 5 stars">
                     <img src="./assets/images/icons/icon-star.svg" alt="">
                     <img src="./assets/images/icons/icon-star.svg" alt="">
                     <img src="./assets/images/icons/icon-star.svg" alt="">
@@ -53,8 +53,8 @@
             </div>
           </div>
           <picture class="hero__image">
-            <source media="(min-width: 1024px)" srcset="./assets/images/hero/hero-desktop.webp">
-            <source media="(min-width: 768px)" srcset="./assets/images/hero/hero-tablet.webp">
+            <source media="(min-width: 64rem)" srcset="./assets/images/hero/hero-desktop.webp">
+            <source media="(min-width: 48rem)" srcset="./assets/images/hero/hero-tablet.webp">
             <img src="./assets/images/hero/hero-mobile.webp"
               alt="Group of tech enthusiasts reading and discussing books together">
           </picture>
@@ -88,8 +88,8 @@
         </div>
 
         <picture class="feature__image border-image">
-          <source media="(min-width: 1024px)" srcset="./assets/images/sections/read-together-desktop.webp">
-          <source media="(min-width: 768px)" srcset="./assets/images/sections/read-together-tablet.webp">
+          <source media="(min-width: 64rem)" srcset="./assets/images/sections/read-together-desktop.webp">
+          <source media="(min-width: 48rem)" srcset="./assets/images/sections/read-together-tablet.webp">
           <img src="./assets/images/sections/read-together-mobile.webp"
             alt="People gathering in a cozy room discussing a book">
         </picture>
@@ -107,8 +107,8 @@
           </p>
         </div>
         <picture class="community__image border-image">
-          <source media="(min-width: 1024px)" srcset="./assets/images/sections/not-average-desktop.webp">
-          <source media="(min-width: 768px)" srcset="./assets/images/sections/not-average-tablet.webp">
+          <source media="(min-width: 64rem)" srcset="./assets/images/sections/not-average-desktop.webp">
+          <source media="(min-width: 48rem)" srcset="./assets/images/sections/not-average-tablet.webp">
           <img src="./assets/images/sections/not-average-mobile.webp"
             alt="Developers casually talking while holding a book">
         </picture>
@@ -119,22 +119,22 @@
 
     <section class="journey">
       <div class="journey__inner container stack">
-        <h2 class="text-title">Your tech reading journey</h2>
+        <h2 class="journey__title text-title">Your tech reading journey</h2>
         <ol class="journey__list stack">
           <li class="journey__item stack">
-            <span class="journey__item-number">1</span>
+            <span class="journey__item-number" aria-hidden="true">1</span>
             <span class="journey__item-text">Choose your membership tier</span>
           </li>
           <li class="journey__item stack">
-            <span class="journey__item-number">2</span>
+            <span class="journey__item-number" aria-hidden="true">2</span>
             <span class="journey__item-text">Get your monthly book selection</span>
           </li>
           <li class="journey__item stack">
-            <span class="journey__item-number">3</span>
+            <span class="journey__item-number" aria-hidden="true">3</span>
             <span class="journey__item-text">Join our discussion forums</span>
           </li>
           <li class="journey__item stack">
-            <span class="journey__item-number">4</span>
+            <span class="journey__item-number" aria-hidden="true">4</span>
             <span class="journey__item-text">Attend exclusive meetups</span>
           </li>
         </ol>
@@ -145,47 +145,71 @@
       <div class="pricing__inner container stack">
         <h2 class="text-title">Membership options</h2>
         <div class="pricing__options">
-          <article class="pricing-card">
-            <header class="pricing-card__header stack">
-              <h3 class="pricing-card__title">Starter</h3>
-              <p class="pricing-card__price">
-                <span class="pricing-card__value">$19</span>
-                <span class="pricing-card__label">/month</span>
-              </p>
-            </header>
-            <ul class="pricing-card__features stack">
-              <li class="pricing-card__feature">1 book/month</li>
-              <li class="pricing-card__feature">Online forums</li>
-            </ul>
+          <article class="pricing-card stack">
+            <div class="pricing-card__text stack">
+              <div class="pricing-card__header stack">
+                <h3 class="pricing-card__title">Starter</h3>
+                <p class="pricing-card__price">
+                  <span class="pricing-card__value">$19</span>
+                  <span class="pricing-card__label">/month</span>
+                </p>
+              </div>
+              <ul class="pricing-card__features stack">
+                <li class="pricing-card__feature cluster">
+                  <img src="./assets/images/icons/icon-check.svg" alt="">
+                  <span>1 book/month</span>
+                </li>
+                <li class="pricing-card__feature cluster">
+                  <img src="./assets/images/icons/icon-check.svg" alt="">
+                  <span>Online forums</span>
+                </li>
+              </ul>
+            </div>
 
-            <a href="#" class="btn btn--secondary">Subscribe now</a>
+            <button type="button" class="btn cluster">Subscribe now</button>
           </article>
-          <article class="pricing-card">
-            <header class="pricing-card__header stack">
-              <h3 class="pricing-card__title">Pro</h3>
-              <p class="pricing-card__price">
-                <span class="pricing-card__value">$29</span>
-                <span class="pricing-card__label">/month</span>
-              </p>
-            </header>
-            <ul class="pricing-card__features stack">
-              <li class="pricing-card__feature">2 book/month</li>
-              <li class="pricing-card__feature">Virtual meetups</li>
-            </ul>
-            <a href="#" class="btn btn--secondary">Subscribe now</a>
+          <article class="pricing-card pricing-card--accent stack">
+            <div class="pricing-card__text stack">
+              <div class="pricing-card__header stack">
+                <h3 class="pricing-card__title">Pro</h3>
+                <p class="pricing-card__price">
+                  <span class="pricing-card__value">$29</span>
+                  <span class="pricing-card__label">/month</span>
+                </p>
+              </div>
+              <ul class="pricing-card__features stack">
+                <li class="pricing-card__feature cluster">
+                  <img src="./assets/images/icons/icon-check.svg" alt="">
+                  <span>2 book/month</span>
+                </li>
+                <li class="pricing-card__feature cluster">
+                  <img src="./assets/images/icons/icon-check.svg" alt="">
+                  <span>Virtual meetups</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn cluster">Subscribe now</button>
           </article>
-          <article class="pricing-card">
-            <header class="pricing-card__header stack">
-              <h3 class="pricing-card__title">Enterprise</h3>
-              <p class="pricing-card__price">
-                <span class="pricing-card__value">Custom</span>
-              </p>
-            </header>
-            <ul class="pricing-card__features stack">
-              <li class="pricing-card__feature">Team access</li>
-              <li class="pricing-card__feature">Private sessions</li>
-            </ul>
-            <a href="#" class="btn btn--secondary">Talk to us</a>
+          <article class="pricing-card stack">
+            <div class="pricing-card__text stack">
+              <div class="pricing-card__header stack">
+                <h3 class="pricing-card__title">Enterprise</h3>
+                <p class="pricing-card__price">
+                  <span class="pricing-card__value">Custom</span>
+                </p>
+              </div>
+              <ul class="pricing-card__features stack">
+                <li class="pricing-card__feature cluster">
+                  <img src="./assets/images/icons/icon-check.svg" alt="">
+                  <span>Team access</span>
+                </li>
+                <li class="pricing-card__feature cluster">
+                  <img src="./assets/images/icons/icon-check.svg" alt="">
+                  <span>Private sessions</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn cluster">Talk to us</button>
           </article>
         </div>
       </div>
