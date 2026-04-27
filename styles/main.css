@@ -52,6 +52,7 @@
   }
 
   .hero__title {
+    max-inline-size: 15ch;
     font-family: var(--ff-display);
     font-size: var(--fs-800);
     letter-spacing: -0.053em;
@@ -85,7 +86,7 @@
   }
 
   .testimonial-summary__avatars {
-    max-inline-size: 110px;
+    max-inline-size: 6.875rem;
     grid-row: span 2;
     align-self: center;
   }
@@ -115,7 +116,6 @@
   .feature__content {
     --stack-space: var(--spacing-300);
   }
-
 
   .feature__list {
     --stack-space: var(--spacing-200);
@@ -178,12 +178,12 @@
   }
 
   .journey__item-number {
-    inline-size: 32px;
-    block-size: 32px;
+    inline-size: 2rem;
+    block-size: 2rem;
     padding-block: var(--spacing-050);
     display: grid;
     place-items: center;
-    border: 2px solid currentColor;
+    border: 0.125rem solid currentColor;
     border-radius: var(--radius-4);
   }
 
@@ -201,7 +201,7 @@
   .pricing-card {
     --stack-space: var(--spacing-400);
     padding: var(--spacing-300);
-    border: 1px solid var(--clr-neutral-200);
+    border: 0.0625rem solid var(--clr-neutral-200);
     border-radius: var(--radius-8);
   }
 
@@ -215,7 +215,7 @@
 
   .pricing-card__header {
     padding-block-end: var(--spacing-300);
-    border-bottom: 1px solid var(--clr-neutral-200);
+    border-bottom: 0.0625rem solid var(--clr-neutral-200);
   }
 
   .pricing-card__title {
@@ -295,15 +295,16 @@
   .footer__content {
     --stack-space: var(--spacing-300);
     padding-block-end: var(--spacing-800);
-    border-bottom: 1px solid var(--clr-neutral-700);
+    border-bottom: 0.0625rem solid var(--clr-neutral-700);
+    align-items: center;
   }
 
   .footer__text {
     --stack-space: var(--spacing-500);
-    text-align: center;
   }
 
   .footer__title {
+    text-align: center;
     color: var(--clr-neutral-100);
   }
 
@@ -312,9 +313,11 @@
   }
 
   .footer__meta {
-    --stack-space: var(--spacing-200);
     padding-block: var(--spacing-300);
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: var(--spacing-200);
   }
 
   /* MENU */
@@ -362,6 +365,7 @@
   .btn {
     --cluster-space: var(--spacing-150);
     padding: var(--spacing-250) var(--spacing-300);
+    max-inline-size: 23.75rem;
     justify-content: center;
     font-size: var(--fs-200);
     font-weight: var(--fw-semibold);
@@ -370,13 +374,14 @@
     text-transform: uppercase;
     letter-spacing: -0.0625em;
     line-height: 1.3;
-    border: 2px solid currentColor;
+    border: 0.125rem solid currentColor;
     border-radius: var(--radius-8);
     color: var(--clr-neutral-900);
     background-color: var(--clr-salmon-50);
   }
 
   .btn--inverse {
+    margin-inline: auto;
     background-color: transparent;
     color: var(--clr-neutral-0);
   }
@@ -397,6 +402,7 @@
   }
 
   .text-title {
+    max-inline-size: 18ch;
     font-family: var(--ff-display);
     font-size: var(--fs-700);
     letter-spacing: -0.06em;
@@ -439,6 +445,92 @@
   }
 }
 
-@layer responsive {}
+@layer responsive {
+
+  @media (width >=48rem) {
+
+    .page {
+      --stack-space: var(--spacing-1000);
+    }
+
+    .container {
+      --container-padding: calc(var(--spacing-400) * 2);
+    }
+
+    .header {
+      padding-block-start: var(--spacing-400);
+    }
+
+    .hero {
+      padding-block-start: var(--spacing-800);
+      background-color: var(--clr-neutral-100);
+      background-image: url('./../assets/images/patterns/pattern-light-bg.svg'), url('./../assets/images/patterns/pattern-glow.svg');
+      background-repeat: repeat, no-repeat;
+      background-position: left top, left bottom -80%;
+    }
+
+    .hero__description {
+      padding-inline-end: var(--spacing-250);
+    }
+
+    .hero__image {
+      border-radius: var(--radius-10);
+    }
+
+    .feature__content {
+      --stack-space: calc(var(--spacing-400) + var(--spacing-025));
+    }
+
+    .feature__title {
+      max-inline-size: 15ch;
+    }
+
+    .feature__list {
+      --stack-space: var(--spacing-300);
+    }
+
+    .border-image {
+      border-radius: var(--radius-24);
+    }
+
+    .journey__inner {
+      --stack-space: var(--spacing-600);
+      padding: var(--spacing-1000) var(--spacing-400);
+    }
+
+    .journey__list {
+      --stack-space: calc(var(--spacing-400) + var(--spacing-075));
+    }
+
+    .pricing__inner {
+      --stack-space: var(--spacing-500);
+    }
+
+    .pricing__options {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial__quote {
+      padding-inline-end: var(--spacing-0);
+    }
+
+    .footer {
+      padding-block-start: var(--spacing-800);
+    }
+
+    .footer__meta {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: stretch;
+    }
+
+    .social {
+      justify-self: end;
+    }
+
+    .attribution {
+      grid-column: 1/-1;
+    }
+  }
+}
 
 @layer states {}
