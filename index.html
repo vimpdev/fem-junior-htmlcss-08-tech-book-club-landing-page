@@ -65,7 +65,7 @@
     <section class="feature">
       <div class="feature__inner container stack">
         <div class="feature__content stack">
-          <h2 class="text-title">Read together, grow together</h2>
+          <h2 class="feature__title text-title">Read together, grow together</h2>
 
           <ul class="feature__list stack">
             <li class="feature__item text-description cluster">
@@ -99,7 +99,7 @@
     <section class="community">
       <div class="community__inner container stack">
         <div class="community__content stack">
-          <h2 class="text-title">Not your average book <span class="text-highlight">club</span></h2>
+          <h2 class="community__title text-title">Not your average book <span class="text-highlight">club</span></h2>
           <p class="text-description">
             Connect with a community that speaks your language - from <em class="text-accent">Python</em> to <em
               class="text-accent">TypeScript</em> and
@@ -143,7 +143,7 @@
 
     <section id="options" class="pricing">
       <div class="pricing__inner container stack">
-        <h2 class="text-title">Membership options</h2>
+        <h2 class="pricing__title text-title">Membership options</h2>
         <div class="pricing__options">
           <article class="pricing-card stack">
             <div class="pricing-card__text stack">
@@ -218,9 +218,9 @@
       </div>
     </section>
 
-    <section class="testimonial">
+    <section class="testimonial" aria-label="Member testimonial">
       <div class="testimonial__inner container stack">
-        <div class="star-group cluster" aria-label="Rated 5 out of 5 stars">
+        <div class="star-group cluster" role="img" aria-label="Rated 5 out of 5 stars">
           <img src="./assets/images/icons/icon-star.svg" alt="">
           <img src="./assets/images/icons/icon-star.svg" alt="">
           <img src="./assets/images/icons/icon-star.svg" alt="">
@@ -244,32 +244,36 @@
 
   <footer class="footer">
     <div class="footer__inner container">
-      <h2 class="text-title">Ready to debug your reading list?</h2>
-      <a href="#options" class="btn btn--inverse">
-        <span>Review membership options</span>
-        <img src="./assets/images/icons/icon-arrow-up.svg" alt="">
-      </a>
-      <div class="testimonial-summary">
-        <img src="./assets/images/avatars/avatars.webp" alt="" class="testimonial-summary__avatars">
-        <div class="star-group" aria-label="Rated 5 out of 5 stars">
-          <img src="./assets/images/icons/icon-star.svg" alt="">
-          <img src="./assets/images/icons/icon-star.svg" alt="">
-          <img src="./assets/images/icons/icon-star.svg" alt="">
-          <img src="./assets/images/icons/icon-star.svg" alt="">
-          <img src="./assets/images/icons/icon-star.svg" alt="">
+      <div class="footer__content stack">
+        <div class="footer__text stack">
+          <h2 class="footer__title text-title">Ready to debug your reading list?</h2>
+          <a href="#options" class="btn btn--inverse cluster">
+            <span>Review membership options</span>
+            <img src="./assets/images/icons/icon-arrow-up.svg" alt="">
+          </a>
         </div>
-        <p class="testimonial-summary__text">200+ developers joined already</p>
+        <div class="testimonial-summary">
+          <img src="./assets/images/avatars/avatars.webp" alt="" class="testimonial-summary__avatars">
+          <div class="testimonial-summary__content stack">
+            <div class="star-group cluster" role="img" aria-label="Rated 5 out of 5 stars">
+              <img src="./assets/images/icons/icon-star.svg" alt="">
+              <img src="./assets/images/icons/icon-star.svg" alt="">
+              <img src="./assets/images/icons/icon-star.svg" alt="">
+              <img src="./assets/images/icons/icon-star.svg" alt="">
+              <img src="./assets/images/icons/icon-star.svg" alt="">
+            </div>
+            <p class="testimonial-summary__text testimonial-summary__text--footer">200+ developers joined already</p>
+          </div>
+        </div>
       </div>
 
-      <hr class="footer__divider">
-
-      <div class="footer__meta cluster">
+      <div class="footer__meta stack">
         <p class="footer__copy">© 2024 - Tech Book Club</p>
 
         <nav class="social" aria-label="Social media profiles">
           <ul class="social__list cluster">
             <li class="social__item">
-              <a href="https://bsky.app/" class="social__link" aria-label="Follow us on BluesKy">
+              <a href="https://bsky.app/" class="social__link" aria-label="Follow us on Bluesky">
                 <svg class="social__icon" aria-hidden="true">
                   <use href="./assets/images/logos/logos-sprite.svg#logo-bluesky"></use>
                 </svg>
