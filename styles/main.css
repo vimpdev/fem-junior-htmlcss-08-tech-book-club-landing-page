@@ -34,6 +34,16 @@
     padding-block-start: var(--spacing-300);
   }
 
+  /* BRAND */
+  .brand {
+    inline-size: max-content;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-4);
+    z-index: 1;
+    position: relative;
+  }
+
   /* HERO */
   .hero {
     padding-block: var(--spacing-600) var(--spacing-1000);
@@ -378,7 +388,11 @@
   }
 
   .social__link {
+    display: grid;
+    place-items: center;
     color: var(--clr-neutral-100);
+    border-radius: var(--radius-4);
+    transition: color var(--transition-fast);
   }
 
   .social__icon {
@@ -396,6 +410,8 @@
     position: relative;
     margin-inline: .3em;
     text-decoration: none;
+    border-radius: var(--radius-4);
+    transition: color var(--transition-fast);
 
     &::after {
       content: '';
@@ -404,8 +420,10 @@
       left: 0;
       inline-size: 100%;
       block-size: 0.12rem;
-      transform: scale(1);
       background-color: currentColor;
+      transform: scale(1);
+      transition: transform var(--transition-fast);
+      pointer-events: none;
     }
   }
 
@@ -426,12 +444,30 @@
     border-radius: var(--radius-8);
     color: var(--clr-neutral-900);
     background-color: var(--clr-salmon-50);
+    isolation: isolate;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--clr-bg-gradient);
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      z-index: -1;
+      pointer-events: none;
+    }
   }
 
   .btn--inverse {
     margin-inline: auto;
     background-color: transparent;
     color: var(--clr-neutral-0);
+
+    &::after {
+      background: var(--clr-bg-gradient-accent);
+    }
   }
 }
 
@@ -710,4 +746,29 @@
   }
 }
 
-@layer states {}
+@layer states {
+  :focus-visible {
+    outline-color: var(--clr-neutral-700);
+  }
+
+  .footer :focus-visible {
+    outline-color: var(--clr-salmon-100);
+  }
+
+  .btn:is(:hover, :focus-visible)::after {
+    opacity: 1;
+  }
+
+  .social__link:is(:hover, :focus-visible) {
+    color: var(--clr-salmon-100);
+  }
+
+  .attribution__link:is(:hover, :focus-visible) {
+    color: var(--clr-salmon-100);
+
+  }
+
+  .attribution__link:is(:hover, :focus-visible)::after {
+    transform: scale(0);
+  }
+}

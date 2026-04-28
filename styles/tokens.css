@@ -11,6 +11,7 @@
     --clr-salmon-50: #FFF5EF;
     --clr-txt-gradient: linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
     --clr-bg-gradient: linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%);
+    --clr-bg-gradient-accent: linear-gradient(90deg, #385159 0%, #062630 100%);
 
     --spacing-0: 0;
     --spacing-025: 0.125rem;
@@ -51,5 +52,7 @@
     --fs-600: 2.125rem;
     --fs-700: clamp(2.125rem, 1.15rem + 4.15vw, 3.125rem);
     --fs-800: clamp(2.375rem, .9rem + 6.2vw, 3.875rem);
+
+    --transition-fast: .25s ease-out;
   }
 }
