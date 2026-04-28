@@ -15,7 +15,7 @@ This is a solution to the [Tech book club landing page challenge on Frontend Men
 ## 🔗 Links
 
 - 🌎 [Live site](https://vimpdev.github.io/fem-junior-htmlcss-08-tech-book-club-landing-page/)
-<!-- - 📌 [Frontend Mentor solution]() -->
+- 📌 [Frontend Mentor solution](https://www.frontendmentor.io/solutions/tech-book-club-landing-page-responsive-ui-with-modern-css-and-access-KCgDzCTVAW)
 
 ---
 
